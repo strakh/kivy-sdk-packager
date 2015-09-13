@@ -1096,7 +1096,7 @@ specified.'''.format(mingw64_default.replace('%', '%%')),
         exec_binary(
             'Extracting vcredist',
             [self.zip7, 'x', '-y', '-o{}'.format(msvcr), local_url,
-            ' | findstr /v /b "Extracting"'], env,
+            ' | findstr /v /b Extracting'], env,
             self.temp_dir, shell=True)
 
         # for VS2010 we need to create pretend files, otherwise the isnatller
