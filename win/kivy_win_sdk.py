@@ -448,7 +448,7 @@ specified.'''.format(mingw64_default.replace('%', '%%')),
             env = os.environ.copy()
             env['PATH'] = ';'.join(
                 [join(build_path, 'SDL2', 'bin'), pydir, join(mingw, 'bin'),
-                join(pydir, 'Scripts'), join(build_path, 'gstreamer', 'bin'),
+                join(pydir, 'Scripts'), join(build_path, 'gstreamer', 'bin'), pydir,
                 env['PATH']])
             env['PYTHONPATH'] = ''
             env['USE_SDL2'] = '1'
