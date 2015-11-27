@@ -47,29 +47,29 @@ sleep 2
 
 # tell the Finder to resize the window, set the background,
 #  change the icon size, place the icons in the right position, etc.
-echo '
-   tell application "Finder"
-     tell disk "'${VOL_NAME}'"
-           open
-           set current view of container window to icon view
-           set toolbar visible of container window to false
-           set statusbar visible of container window to false
-           delay 1
-		   set the bounds of container window to {100, 100, 650, 501}
-           delay 1
-           set viewOptions to the icon view options of container window
-           set arrangement of viewOptions to not arranged
-           set icon size of viewOptions to 128
-           set background picture of viewOptions to file ".background:'${DMG_BACKGROUND_IMG}'"
-           set position of item "'${APP_NAME}'.app" of container window to {160, 265}
-           set position of item "Applications" of container window to {384, 265}
-           close
-           open
-           update without registering applications
-           delay 2
-     end tell
-   end tell
-' | osascript
+# echo '
+#    tell application "Finder"
+#      tell disk "'${VOL_NAME}'"
+#            open
+#            set current view of container window to icon view
+#            set toolbar visible of container window to false
+#            set statusbar visible of container window to false
+#            delay 1
+# 		   set the bounds of container window to {100, 100, 650, 501}
+#            delay 1
+#            set viewOptions to the icon view options of container window
+#            set arrangement of viewOptions to not arranged
+#            set icon size of viewOptions to 128
+#            set background picture of viewOptions to file ".background:'${DMG_BACKGROUND_IMG}'"
+#            set position of item "'${APP_NAME}'.app" of container window to {160, 265}
+#            set position of item "Applications" of container window to {384, 265}
+#            close
+#            open
+#            update without registering applications
+#            delay 2
+#      end tell
+#    end tell
+# ' | osascript
  
 sync
 
